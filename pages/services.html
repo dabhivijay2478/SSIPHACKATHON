@@ -1,0 +1,108 @@
+<div id="cover-spin"></div>
+<style>
+  #cover-spin {
+    position:fixed;
+    width:100%;
+    left:0;right:0;top:0;bottom:0;
+    background-color: rgba(255,255,255,0.7);
+    z-index:9999;
+    display:none;
+}
+
+@-webkit-keyframes spin {
+	from {-webkit-transform:rotate(0deg);}
+	to {-webkit-transform:rotate(360deg);}
+}
+
+@keyframes spin {
+	from {transform:rotate(0deg);}
+	to {transform:rotate(360deg);}
+}
+
+#cover-spin::after {
+    content:'';
+    display:block;
+    position:absolute;
+    left:48%;top:40%;
+    width:40px;height:40px;
+    border-style:solid;
+    border-color:black;
+    border-top-color:transparent;
+    border-width: 4px;
+    border-radius:50%;
+    -webkit-animation: spin .8s linear infinite;
+    animation: spin .8s linear infinite;
+}
+</style>
+
+
+<div>
+  <div class="grid sm:grid-cols-2 gap-4">
+    <form action="#" method="post" class="update">
+      <div class="border-b sm:border-b-0 sm:border-r p-8 relative">
+        <div>
+          <label for="updatemain" class="block mb-2 text-sm font-medium text-black dark:text-black">સેવા પસંદ
+            કરો</label>
+          <select id="updatemain" required
+            class="updatemain bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option selected="">સેવા પસંદ કરો</option>
+            <option value="Certificates" data-value="Certificates">1) પ્રમાણપત્ર</option>
+            <option value="Magisterial" data-value="Magisterial">2) મેજિસ્ટ્રિયલ</option>
+            <option value="Miscellaneous" data-value="Miscellaneous">3) વિવિધ</option>
+            <option value="Revenue" data-value="Revenue">4) આવક</option>
+            <option value="RTI" data-value="RTI">5) RTI </option>
+            <option value="Social Security" data-value="Social Security">6) સામાજિક સુરક્ષા</option>
+            <option value="Supply" data-value="Supply">7) પુરવઠા</option>
+          </select>
+        </div>
+        <div class="mt-2">
+          <label for="small" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black ">સેવા
+            પસંદ કરો</label>
+          <select id="updatesub" required
+            class="updatesub block p-2 mb-6 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option selected="">સેવા પસંદ કરો</option>
+      
+
+          </select>
+        </div>
+        <div>
+
+          <h3 class="text-3xl font-bold dark:text-black ">પુરાવાઓની પ્રમાણિત નકલ</h3>
+          <section class="bg-white dark:bg-white">
+            <div class="py-8 lg:py-5 px-4 mx-auto max-w-screen-md">
+
+              
+
+                <div class="sm:col-span-2">
+
+                  <textarea id="proof" rows="6" required
+                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    placeholder="કયા દસ્તાવેજોની જરૂર છે"></textarea>
+                </div>
+
+            </div>
+            <div>
+
+            </div>
+          </section>
+
+
+        </div>
+        
+        <div class="py-8 lg:py-5 px-4 mx-auto max-w-screen-md">
+
+          <button type="submit" id="upsubmit" name="upsubmit"
+            class=" text-white  bg-blue-500 hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">અપડેટ
+          </button>
+
+        </div>
+      </div>
+    </form>
+    <div class="p-8">
+      <img src="../images/process.png" alt="process" />
+    </div>
+  </div>
+</div>
+
+
+<script src="/dist//service.js"></script>

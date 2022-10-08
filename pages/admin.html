@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link rel="stylesheet" href="../asstes/index.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/admin-settings-male.png" type="image/x-icon">
+</head>
+
+<body ng-app="">
+    <div>
+        <div class="container my-12 mx-auto px-3 md:px-11">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-black">સેવા પસંદ
+                કરો
+            </h2>
+
+            <label for="service" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">સેવા પસંદ
+                કરો</label>
+            <select id="service" ng-model="action"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected="સેવા પસંદ કરો">સેવા પસંદ કરો</option>
+                <option value="add">1) ઉમેરો</option>
+                <option value="update">2) અપડેટ</option>
+
+            </select>
+        </div>
+        <div class="flex flex-wrap ">
+            <div ng-switch="action">
+                <div ng-switch-when="add">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="border-b sm:border-b-0 sm:border-r p-8 relative">
+
+                            <label for="countries"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">સેવા
+                                પસંદ કરો</label>
+                            <select id="countries"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected="">સેવા પસંદ કરો</option>
+                                <option value="certi">1) પ્રમાણપત્ર</option>
+                                <option value="megisterial">2) મેજિસ્ટ્રિયલ</option>
+                                <option value="other">3) વિવિધ</option>
+                                <option value="income">4) આવક</option>
+                                <option value="rti">5) RTI </option>
+                                <option value="social">6) સામાજિક સુરક્ષા</option>
+                                <option value="supply">7) પુરવઠા</option>
+                            </select>
+
+                            <label for="small"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-black ">સેવા
+                                પસંદ કરો</label>
+                            <select id="small"
+                                class="block p-2 mb-6 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected="">સેવા પસંદ કરો</option>
+                                <option value="certi">બીનઅનામત વર્ગનું જાતિનું પ્રમાણપત્ર મેળવવા બાબત</option>
+                                <!-- <option value="CA">Canada</option>
+                        <option value="FR">France</option>
+                        <option value="DE">Germany</option> -->
+                            </select>
+                            <div>
+
+                                <h3 class="text-3xl font-bold dark:text-black ">પુરાવાઓની પ્રમાણિત નકલ</h3>
+                                <section class="bg-white dark:bg-white">
+                                    <div class="py-8 lg:py-5 px-4 mx-auto max-w-screen-md">
+
+                                        <form action="#" class="space-y-8">
+
+                                            <div class="sm:col-span-2">
+
+                                                <textarea id="proof" rows="6"
+                                                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                                    placeholder="કયા દસ્તાવેજોની જરૂર છે"></textarea>
+                                            </div>
+
+                                    </div>
+                                </section>
+
+
+                            </div>
+                            <div>
+
+                                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+                                    for="file_input">
+                                    પ્રક્રિયા માટે ફાઇલ અપલોડ કરો</label>
+                                <input
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    id="file_input" type="file">
+
+                            </div>
+                            <div class="py-8 lg:py-5 px-4 mx-auto max-w-screen-md">
+
+                                <button type="button"
+                                    class=" text-white  bg-blue-500 hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">ઉમેરો
+                                </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <img src="../images/process.png" alt="process" />
+                        </div>
+                    </div>
+                </div>
+                <div ng-switch-when="update">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="border-b sm:border-b-0 sm:border-r p-8 relative">
+
+                            <label for="countries"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">સેવા
+                                પસંદ કરો</label>
+                            <select id="countries"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected="">સેવા પસંદ કરો</option>
+                                <option value="certi">1) પ્રમાણપત્ર</option>
+                                <option value="megisterial">2) મેજિસ્ટ્રિયલ</option>
+                                <option value="other">3) વિવિધ</option>
+                                <option value="income">4) આવક</option>
+                                <option value="rti">5) RTI </option>
+                                <option value="social">6) સામાજિક સુરક્ષા</option>
+                                <option value="supply">7) પુરવઠા</option>
+                            </select>
+
+                            <label for="small"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-black ">સેવા
+                                પસંદ કરો</label>
+                            <select id="small"
+                                class="block p-2 mb-6 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected="">સેવા પસંદ કરો</option>
+                                <option value="certi">બીનઅનામત વર્ગનું જાતિનું પ્રમાણપત્ર મેળવવા બાબત</option>
+                                <!-- <option value="CA">Canada</option>
+                        <option value="FR">France</option>
+                        <option value="DE">Germany</option> -->
+                            </select>
+                            <div>
+
+                                <h3 class="text-3xl font-bold dark:text-black ">પુરાવાઓની પ્રમાણિત નકલ</h3>
+                                <section class="bg-white dark:bg-white">
+                                    <div class="py-8 lg:py-5 px-4 mx-auto max-w-screen-md">
+
+                                        <form action="#" class="space-y-8">
+
+                                            <div class="sm:col-span-2">
+
+                                                <textarea id="proof" rows="6"
+                                                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                                    placeholder="કયા દસ્તાવેજોની જરૂર છે"></textarea>
+                                            </div>
+
+                                    </div>
+                                </section>
+
+
+                            </div>
+                            <div>
+
+                                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+                                    for="file_input">
+                                    પ્રક્રિયા માટે ફાઇલ અપલોડ કરો</label>
+                                <input
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    id="file_input" type="file">
+
+                            </div>
+                            <div class="py-8 lg:py-5 px-4 mx-auto max-w-screen-md">
+
+                                <button type="button"
+                                    class=" text-white  bg-blue-500 hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">અપડેટ
+                                </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <img src="../images/process.png" alt="process" />
+                        </div>
+                    </div>
+                </div>
+
+        
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

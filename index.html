@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.digitalgujarat.gov.in/images/favicon1-16x16.png" type="image/x-icon">
+    <title>જન સેવા
+        કેન્દ્ર</title>
+        <!-- <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" /> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+  
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body ng-app="myApp" class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+    <div>
+        <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5  dark:bg-gray-700">
+            <div class="container flex flex-wrap justify-between items-center mx-auto">
+                <a href="#" class="flex items-center">
+                    <img src="/images/logo.png" class="mr-3 h-6 whitespace-nowrap sm:h-9 dark:text-white" alt="logo">
+                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">જન સેવા
+                        કેન્દ્ર</span>
+                </a>
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul
+                        class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <li>
+                            <a href="#!home"
+                                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                aria-current="page">મુખ્ય પેજ</a>
+                        </li>
+
+                        <li>
+                            <a href="#!services"
+                                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">અમારી
+                                સેવાઓ</a>
+                        </li>
+                        <li>
+                            <a href="#!map"
+                                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                                નજીકનું જન સેવા કેન્દ્ર</a>
+                        </li>
+
+                        <li>
+                            <a href="#!contact"
+                                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">અમારો
+                                સંપર્ક કરો</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <div ng-view>
+
+
+        </div>
+
+    </div>
+
+
+    <div>
+
+
+        <footer class="p-4  shadow md:px-6 md:py-8 dark:bg-gray-700 static bottom-0">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="https://www.digitalgujarat.gov.in/" target="_blank"
+                    class="flex  items-center place-content-center mb-4 sm:mb-0">
+                    <img src="./images/digital-gujarat.png" class="mr-3 h-11" alt=" digital-gujarat">
+
+                </a>
+                <a href="https://www.digitalindia.gov.in/ " target="_blank"
+                    class="flex   items-center place-content-center mb-4 sm:mb-0">
+                    <img src="./images/digital-india.png" class="mr-5  rounded-lg   bg-white h-12" alt="digital-india">
+
+                </a>
+
+                <a href="https://www.mygov.in/ " target="_blank"
+                    class="flex items-center place-content-center mb-4 sm:mb-0">
+                    <img src="./images/mygov.png" class="mr-5 bg-white rounded-lg  h-12" alt="mygov">
+
+                </a>
+
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
+            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a
+                    href="https://www.digitalgujarat.gov.in/" target="_blank" class="hover:underline">ડિજિટલ ગુજરાત
+                    2020.</a>.સર્વાધિકાર સુરક્ષિત.
+
+            </span>
+        </footer>
+
+
+    </div>
+    <script src="/dist/bundle.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+   
+ 
+    <script src="https://kit.fontawesome.com/9418f17761.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
